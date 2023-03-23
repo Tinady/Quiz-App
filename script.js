@@ -24,3 +24,15 @@ const  quizData= [
              },
                 
 ]
+
+const questionEl= document.getElementById('question')
+ const a_text= document.getElementById('a-text')
+ const b_text=document.getElementById('b-text')
+ const c_text=document.getElementById('c-text')
+ const d_text=document.getElementById('d-text')
+ const submitbtn=document.getElementById('submit')
+
+let currentQuiz=0;
+
+
+loadQuiz();
