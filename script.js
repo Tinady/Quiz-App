@@ -55,8 +55,15 @@ function loadQuiz(){
 submitbtn.addEventListener("click", ()=>{
 
     currentQuiz++;
+    if(currentQuiz<=quizData.length)
+    { loadQuiz();
+    }
+    else{
+        alert('Done!!!')
+    }
+    
 
-    loadQuiz();
+   
 
 
 });
