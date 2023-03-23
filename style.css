@@ -27,3 +27,11 @@ ul{
     list-style: none;
 }
 
+.quiz-header{
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 300px;
+    height: 250px;
+    padding: 0px 2px;
+    box-shadow: 4px 4px rgb(74, 76, 151,0.75);
+}
