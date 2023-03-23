@@ -52,6 +52,14 @@ function loadQuiz(){
     
 }
 
+function getSelected(){
+    const answers=document.querySelectorAll('answers');
+
+    answers.forEach((answer) =>{
+        console.log(answer.value)
+    });
+}
+
 submitbtn.addEventListener("click", ()=>{
 
     currentQuiz++;
