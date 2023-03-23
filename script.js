@@ -1,6 +1,6 @@
 const  quizData= [
     {
-        question:"How old are u?",
+        question:"How old are you?",
         a:19,
         b:29,
         c:39,
@@ -8,7 +8,7 @@ const  quizData= [
          },
     
          {
-            question:"What is your favourite coloe",
+            question:"What is your favourite color",
             a:'green',
             b:'blue',
             c:'yellow',
@@ -16,11 +16,11 @@ const  quizData= [
              },
 
        {
-                question:"what is my name",
-                 a:'green',
-                 b:'blue',
-                 c:'yellow',
-                 d:'Brown',
+                question:"what is your name",
+                 a:'Abebe',
+                 b:'Kebede',
+                 c:'Abebech',
+                 d:'Kebedech',
              },
                 
 ]
