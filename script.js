@@ -51,3 +51,13 @@ function loadQuiz(){
 
     
 }
+
+submitbtn.addEventListener("click", ()=>{
+
+    currentQuiz++;
+
+    loadQuiz();
+
+
+});
+
