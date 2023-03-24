@@ -25,6 +25,7 @@ const  quizData= [
                 
 ]
 const answersEl=document.querySelectorAll('.answer');
+const quizEl=document.getElementById('quiz')
 const questionEl= document.getElementById('question')
  const a_text= document.getElementById('a-text')
  const b_text=document.getElementById('b-text')
@@ -96,13 +97,14 @@ submitbtn.addEventListener("click", ()=>{
     if(answer)
     {
         currentQuiz++;
-        if(currentQuiz<=quizData.length)
+        if(currentQuiz<quizData.length)
         { loadQuiz();
         }
        else{
-         alert('Done!!!')
+        quizEl.innerHTML =
+         '<h2>you answered ${score}/${quizData.length}</h2>'
       }
-        
+    
 
     }
   
