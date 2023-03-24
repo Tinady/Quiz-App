@@ -52,7 +52,7 @@ function loadQuiz(){
     
 }
 
-let answer=undefined;
+let answer;
 
 
 function getSelected(){
@@ -62,11 +62,16 @@ function getSelected(){
     answersEL.forEach((answersEL) =>{
       if(answersEL.checked){
         answer= answersEL.id;
+        return answer;
 
       }
 
      
     });
+
+    return undefined;
+
+
 }
 
 submitbtn.addEventListener("click", ()=>{
