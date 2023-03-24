@@ -39,6 +39,9 @@ loadQuiz();
 
 function loadQuiz(){
 
+    deselectAnswer()
+{
+
     const currentQuizData=  quizData[currentQuiz];
     questionEl.innerText= currentQuizData.question;
     a_text.innerText= currentQuizData.a;
@@ -50,6 +53,7 @@ function loadQuiz(){
 
 
     
+}
 }
 
 
@@ -78,8 +82,9 @@ function getSelected(){
 
 function deselectAnswer()
 {
+    let answer;
     answersEl.forEach((answersEL) =>{
-        answer.checked=
+        answer.checked=false;
     }) 
 }
 
