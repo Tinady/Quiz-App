@@ -53,6 +53,7 @@ function loadQuiz(){
 }
 
 let answer;
+let score=0;
 
 
 function getSelected(){
@@ -77,12 +78,17 @@ function getSelected(){
 submitbtn.addEventListener("click", ()=>{
 
     currentQuiz++;
-    //if(currentQuiz<=quizData.length)
-   // { loadQuiz();
-   // }
-   // else{
-  //      alert('Done!!!')
-  //  }
+    if(answer)
+    {
+        if(currentQuiz<=quizData.length)
+        { loadQuiz();
+        }
+       else{
+         alert('Done!!!')
+      }
+
+    }
+   
 
     getSelected()
     
