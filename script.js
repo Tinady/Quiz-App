@@ -31,6 +31,10 @@ const questionEl= document.getElementById('question')
  const c_text=document.getElementById('c-text')
  const d_text=document.getElementById('d-text')
  const submitbtn=document.getElementById('submit')
+ let score=0;
+ let answersEl=document.querySelectorAll('.answer');
+ let answer=undefined;
+
 
 let currentQuiz=0;
 
@@ -38,6 +42,9 @@ let currentQuiz=0;
 loadQuiz();
 
 function loadQuiz(){
+
+    deselectAnswer();
+    
 
     const currentQuizData=  quizData[currentQuiz];
     questionEl.innerText= currentQuizData.question;
@@ -53,14 +60,12 @@ function loadQuiz(){
 }
 
 
-let score=0;
+
 
 
 function getSelected(){
    
-    const answersEl=document.querySelectorAll('.answer');
-    let answer=undefined;
-
+   
     answersEl.forEach((answersEL) =>{
       if(answersEL.checked){
         answer= answersEL.id;
@@ -74,6 +79,13 @@ function getSelected(){
     return answer;
 
 
+}
+
+function deselectAnswer()
+{
+    answersEl.forEach((answersEL) =>{
+        answer.checked=false;
+    }) 
 }
 
 submitbtn.addEventListener("click", ()=>{
@@ -95,7 +107,7 @@ submitbtn.addEventListener("click", ()=>{
     }
   
 
-    getSelected()
+
     
 
    
