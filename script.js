@@ -52,23 +52,32 @@ function loadQuiz(){
     
 }
 
-function getSelected(){
-    const answers=document.querySelectorAll('answer');
+let answer=undefined;
 
-    answers.forEach((answer) =>{
-        console.log(answer.value)
+
+function getSelected(){
+    console.log('hi')
+    const answersEl=document.querySelectorAll('.answer');
+
+    answersEL.forEach((answersEL) =>{
+      if(answersEL.checked){
+        answer= answersEL.id;
+
+      }
+
+     
     });
 }
 
 submitbtn.addEventListener("click", ()=>{
 
     currentQuiz++;
-    if(currentQuiz<=quizData.length)
-    { loadQuiz();
-    }
-    else{
-        alert('Done!!!')
-    }
+    //if(currentQuiz<=quizData.length)
+   // { loadQuiz();
+   // }
+   // else{
+  //      alert('Done!!!')
+  //  }
 
     getSelected()
     
