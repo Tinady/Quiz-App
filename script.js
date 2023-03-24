@@ -57,7 +57,7 @@ let score=0;
 
 
 function getSelected(){
-    console.log('hi')
+   
     const answersEl=document.querySelectorAll('.answer');
     let answer=undefined;
 
@@ -80,18 +80,20 @@ submitbtn.addEventListener("click", ()=>{
 
     
     const answer=getSelected();
-    if(answer && answer===quizData(currentQuiz) )
+    console.log(answer)
+    if(answer)
     {
         currentQuiz++;
+        if(currentQuiz<=quizData.length)
+        { loadQuiz();
+        }
+       else{
+         alert('Done!!!')
+      }
         
 
     }
-    if(currentQuiz<=quizData.length)
-    { loadQuiz();
-    }
-   else{
-     alert('Done!!!')
-  }
+  
 
     getSelected()
     
