@@ -84,7 +84,7 @@ function deselectAnswer()
 {
     
     answersEl.forEach((answersEL) =>{
-        answersEl.checked=false;
+        answersEL.checked=false;
     }) 
 }
 
