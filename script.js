@@ -77,18 +77,20 @@ function getSelected(){
 
 submitbtn.addEventListener("click", ()=>{
 
-    currentQuiz++;
-    if(answer)
+    
+    const answer=getSelected();
+    if(answer && answer===quizData(currentQuiz) )
     {
-        if(currentQuiz<=quizData.length)
-        { loadQuiz();
-        }
-       else{
-         alert('Done!!!')
-      }
+        currentQuiz++;
+        
 
     }
-   
+    if(currentQuiz<=quizData.length)
+    { loadQuiz();
+    }
+   else{
+     alert('Done!!!')
+  }
 
     getSelected()
     
