@@ -82,9 +82,9 @@ function getSelected(){
 
 function deselectAnswer()
 {
-    let answer;
+    
     answersEl.forEach((answersEL) =>{
-        answer.checked=false;
+        answersEl.checked=false;
     }) 
 }
 
