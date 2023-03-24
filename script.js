@@ -52,25 +52,26 @@ function loadQuiz(){
     
 }
 
-let answer;
+
 let score=0;
 
 
 function getSelected(){
     console.log('hi')
     const answersEl=document.querySelectorAll('.answer');
+    let answer=undefined;
 
-    answersEL.forEach((answersEL) =>{
+    answersEl.forEach((answersEL) =>{
       if(answersEL.checked){
         answer= answersEL.id;
-        return answer;
+       
 
       }
 
      
     });
 
-    return undefined;
+    return answer;
 
 
 }
