@@ -5,6 +5,7 @@ const  quizData= [
         b:29,
         c:39,
         d:49,
+        correct:'b',
          },
     
          {
@@ -13,6 +14,7 @@ const  quizData= [
             b:'blue',
             c:'yellow',
             d:'pink',
+            correct:'b',
              },
 
        {
@@ -21,6 +23,7 @@ const  quizData= [
                  b:'Kebede',
                  c:'Abebech',
                  d:'Kebedech',
+                 correct:'b',
              },
                 
 ]
@@ -94,15 +97,26 @@ submitbtn.addEventListener("click", ()=>{
     
     const answer=getSelected();
     console.log(answer)
+     
+
     if(answer)
     {
+        if(answer===quizData[currentQuiz].correct)
+        {
+          score++;
+        } 
+
         currentQuiz++;
         if(currentQuiz<quizData.length)
-        { loadQuiz();
+
+        {
+           
+             loadQuiz();
         }
        else{
         quizEl.innerHTML =
-         '<h2>you answered ${score}/${quizData.length}</h2>'
+         `<h1>you answered  ${score} / ${quizData.length}.</h1>
+         <button onclick="location.reload()">Reload <button>`;
       }
     
 
